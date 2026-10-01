@@ -1,0 +1,15 @@
+### Saludo correcto
+GET http://localhost:8080/api/v1/saludo
+Accept: application/json
+
+### Ruta inexistente: debe responder 404
+GET http://localhost:8080/api/v1/no-existe
+
+### 3) POST a una ruta que solo acepta GET: esperado 405
+POST http://localhost:8080/api/v1/saludo
+
+### Saludo sin parámetro: esperado 200, "Hola, Mundo"
+GET http://localhost:8080/api/v1/saludo
+
+### Saludo con nombre=Ada: esperado 200, "Hola, Ada"
+GET http://localhost:8080/api/v1/saludo?nombre=Ada
