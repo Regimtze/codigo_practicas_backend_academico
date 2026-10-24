@@ -1,0 +1,52 @@
+@baseUrl = http://localhost:8080/api/v1
+
+### Crear alumno: 201 y Location
+POST {{baseUrl}}/alumnos
+Content-Type: application/json
+
+{"matricula":"A001","nombre":"Ada Lovelace","correo":"ada@universidad.mx"}
+
+### Listar alumnos
+GET {{baseUrl}}/alumnos
+
+### Consultar alumno
+GET {{baseUrl}}/alumnos/1
+
+### Actualizar alumno
+PUT {{baseUrl}}/alumnos/1
+Content-Type: application/json
+
+{"nombre":"Ada Byron","correo":"ada.byron@universidad.mx"}
+
+### Eliminar alumno: 204
+DELETE {{baseUrl}}/alumnos/1
+
+
+### Reto · Preparación B: segundo alumno
+POST {{baseUrl}}/alumnos
+Content-Type: application/json
+
+{"matricula":"R002","nombre":"Alan Turing","correo":"alan@universidad.mx"}
+
+### Reto 1: sin filtro
+GET {{baseUrl}}/alumnos
+
+### Reto 2: solo ACTIVO
+GET {{baseUrl}}/alumnos?estatus=ACTIVO
+
+### Reto 3: solo BAJA
+GET {{baseUrl}}/alumnos?estatus=BAJA
+
+### Reto · Verificación: repetir sin filtro
+GET {{baseUrl}}/alumnos
+
+
+
+
+
+### Saludo correcto
+GET http://localhost:8080/api/v1/saludo
+Accept: application/json
+
+### Ruta inexistente: debe responder 404
+GET http://localhost:8080/api/v1/no-existe
