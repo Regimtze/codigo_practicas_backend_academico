@@ -1,0 +1,6 @@
+# Override opcional para observar accesos a la base (evidencia de caché).
+# Uso: docker compose -f compose.yaml -f compose.debug.yaml up -d
+services:
+  app:
+    environment:
+      SPRING_JPA_SHOW_SQL: "true"
