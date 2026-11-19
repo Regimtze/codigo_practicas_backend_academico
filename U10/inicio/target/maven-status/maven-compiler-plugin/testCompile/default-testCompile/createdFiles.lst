@@ -1,0 +1,7 @@
+mx\edu\backendacademico\controller\MiExpedienteTest.class
+mx\edu\backendacademico\controller\AlumnoControllerTest.class
+mx\edu\backendacademico\BackendAcademicoApplicationTests.class
+mx\edu\backendacademico\domain\AlumnoTest.class
+mx\edu\backendacademico\service\AlumnoServiceTest.class
+mx\edu\backendacademico\repository\PostgresIntegrationTest.class
+mx\edu\backendacademico\controller\SeguridadTest.class
